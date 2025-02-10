@@ -1,5 +1,3 @@
-#creates graphs (torque, position)
-import random
 from itertools import count
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -33,26 +31,6 @@ def animate(i):
         "RR": [data['RR0_pos'].tolist(), data['RR1_pos'].tolist(), data['RR2_pos'].tolist()],
         "RL": [data['RL0_pos'].tolist(), data['RL1_pos'].tolist(), data['RL2_pos'].tolist()],
     }
-
-    # fl_0t = data['FL0_torque']
-    # fr_0t = data['FR0_torque']
-    # rl_0t = data['RL0_torque']
-    # rr_0t = data['RR0_torque']
-    # fl_1t = data['FL1_torque']
-    # fr_1t = data['FR1_torque']
-    # rl_1t = data['RL1_torque']
-    # rr_1t = data['RR1_torque']
-    # fl_2t = data['FL2_torque']
-    # fr_2t = data['FR2_torque']
-    # rl_2t = data['RL2_torque']
-    # rr_2t = data['RR2_torque']
-    #y2 = data['total_2']
-
-    #fig.clf()
-
-    #====
-    #fig, (ax0, ax1, ax2) = plt.subplots(nrows = 3, ncols= 1, sharex = True)
-    #====
 
     # TORQUE (COL 1)
     ax0[0].plot(x, torque_data['FL'][0], c = 'red', label = 'FL')
